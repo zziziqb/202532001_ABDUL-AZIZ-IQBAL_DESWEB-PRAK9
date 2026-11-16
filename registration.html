@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Akun | SisaKu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="registration">
+  <a class="skip" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo SisaKu" width="132"></a>
+      <div class="header-actions">
+        <span class="pill">Halo, Fathir</span>
+        <span class="pill">2.450 Poin</span>
+      </div>
+    </div>
+  </header>
+  <div class="navbar">
+    <nav class="container" aria-label="Navigasi utama">
+      <a href="index.html">Home</a>
+      <a href="content.html">Drop Point</a>
+      <a href="contact.html">Lapor Masalah</a>
+      <a href="registration.html" aria-current="page">Daftar</a>
+    </nav>
+  </div>
+  <section class="hero page-hero">
+    <div class="container">
+      <h1>Daftar Akun</h1>
+      <p>Buat akun SisaKu untuk mulai mengumpulkan SisaPoint</p>
+    </div>
+  </section>
+  <div class="container content-layout">
+    <main id="konten">
+      <section class="card">
+        <h2>Form Pendaftaran</h2>
+        <p class="muted">Kolom bertanda * wajib diisi.</p>
+        <form class="form-grid" action="registration.html#berhasil" method="post">
+        <div class="form-group ">
+          <label for="name">Nama Lengkap *</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-group ">
+          <label for="nim">NIM *</label>
+          <input type="text" id="nim" name="nim" aria-describedby="nim-hint" inputmode="numeric" pattern="[0-9]{9}" title="NIM terdiri dari 9 digit angka" required>
+          <small class="hint" id="nim-hint">9 digit angka, contoh: 202532001.</small>
+        </div>
+        <div class="form-group ">
+          <label for="email">Email Kampus *</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-group ">
+          <label for="phone">Nomor Telepon</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="08[0-9]{8,11}" title="Diawali 08, total 10 sampai 13 digit" placeholder="08xxxxxxxxxx">
+        </div>
+        <div class="form-group ">
+          <label for="birth">Tanggal Lahir *</label>
+          <input type="date" id="birth" name="birth" min="1980-01-01" max="2010-12-31" required>
+        </div>
+        <div class="form-group">
+          <label for="prodi">Program Studi *</label>
+          <select id="prodi" name="prodi" required>
+            <option value="" selected disabled>Pilih program studi</option>
+            <option>Teknik Mesin</option>
+            <option>Sistem Informasi</option>
+            <option>Teknik Informatika</option>
+            <option>Teknik Industri</option>
+            <option>Teknik Sipil</option>
+          </select>
+        </div>
+        <fieldset class="span2">
+          <legend>Peran *</legend>
+          <p><label><input type="radio" name="peran" value="mahasiswa" required> Mahasiswa</label></p>
+          <p><label><input type="radio" name="peran" value="dosen"> Dosen</label></p>
+          <p><label><input type="radio" name="peran" value="staf"> Staf</label></p>
+        </fieldset>
+        <div class="form-group span2">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" aria-describedby="password-hint" autocomplete="new-password" minlength="8" required>
+          <small class="hint" id="password-hint">Minimal 8 karakter.</small>
+        </div>
+        <div class="form-group span2">
+          <label class="check"><input type="checkbox" id="setuju" name="setuju" required> Saya menyetujui Syarat &amp; Ketentuan *</label>
+        </div>
+        <div class="form-actions span2">
+          <button class="button" type="submit">Daftar</button>
+          <button class="button secondary" type="reset">Reset</button>
+        </div>
+        </form>
+      </section>
+      <section id="berhasil" class="card success">
+        <h2>Pendaftaran Berhasil!</h2>
+        <p>Akun SisaKu kamu sudah dibuat. Silakan <a href="index.html">kembali ke Home</a>.</p>
+      </section>
+    </main>
+    <aside class="aside">
+      <section class="card">
+        <h2>Sudah punya akun?</h2>
+        <p>Masuk lewat aplikasi SisaKu untuk melihat SisaPoint dan riwayatmu.</p>
+      </section>
+      <section class="card">
+        <h2>Butuh bantuan?</h2>
+        <ul class="links">
+          <li><a href="contact.html#bantuan">Help Center</a></li>
+          <li><a href="contact.html">Lapor Masalah</a></li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>SisaKu: Kelola SisaKu, Jaga KampusKu</p>
+      <p><a href="contact.html">Lapor Masalah</a> | <a href="contact.html#bantuan">Bantuan</a> | <a href="registration.html">Daftar</a></p>
+      <p>&copy; 2026 SisaKu</p>
+    </div>
+  </footer>
+</body>
+</html>

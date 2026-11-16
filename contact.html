@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapor Masalah | SisaKu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact">
+  <a class="skip" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo SisaKu" width="132"></a>
+      <div class="header-actions">
+        <span class="pill">Halo, Fathir</span>
+        <span class="pill">2.450 Poin</span>
+      </div>
+    </div>
+  </header>
+  <div class="navbar">
+    <nav class="container" aria-label="Navigasi utama">
+      <a href="index.html">Home</a>
+      <a href="content.html">Drop Point</a>
+      <a href="contact.html" aria-current="page">Lapor Masalah</a>
+      <a href="registration.html">Daftar</a>
+    </nav>
+  </div>
+  <section class="hero page-hero">
+    <div class="container">
+      <h1>Lapor Masalah</h1>
+      <p>Bantu kami menjaga kebersihan kampus</p>
+    </div>
+  </section>
+  <div class="container content-layout">
+    <main id="konten">
+      <section class="card">
+        <h2>Form Laporan</h2>
+        <p class="muted">Kolom bertanda * wajib diisi.</p>
+        <form class="form-grid" action="contact.html#terima-kasih" method="post" enctype="multipart/form-data">
+        <div class="form-group ">
+          <label for="nama">Nama *</label>
+          <input type="text" id="nama" name="nama" autocomplete="name" required>
+        </div>
+        <div class="form-group ">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-group span2">
+          <label for="foto">Foto Masalah</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+        <fieldset class="span2">
+          <legend>Jenis Masalah *</legend>
+          <p><label><input type="radio" name="jenis" value="penuh" required> Tempat sampah penuh</label></p>
+          <p><label><input type="radio" name="jenis" value="berserakan"> Sampah berserakan</label></p>
+          <p><label><input type="radio" name="jenis" value="bau"> Tempat sampah bau menyengat</label></p>
+          <p><label><input type="radio" name="jenis" value="rusak"> Tempat sampah rusak</label></p>
+          <p><label><input type="radio" name="jenis" value="lainnya"> Lainnya</label></p>
+        </fieldset>
+        <div class="form-group span2">
+          <label for="lokasi">Lokasi Masalah *</label>
+          <input type="text" id="lokasi" name="lokasi" aria-describedby="lokasi-hint" value="Drop Point Bank Sampah A" required>
+          <small class="hint" id="lokasi-hint">Otomatis terdeteksi.</small>
+        </div>
+        <div class="form-group span2">
+          <label for="detail">Detail Laporan *</label>
+          <textarea id="detail" name="detail" rows="4" minlength="10" required></textarea>
+        </div>
+        <div class="form-actions span2">
+          <button class="button" type="submit">Kirim Laporan</button>
+          <button class="button secondary" type="reset">Reset</button>
+        </div>
+        </form>
+      </section>
+      <section id="terima-kasih" class="card success">
+        <h2>Terima Kasih!</h2>
+        <p>Laporan sedang diproses. Tim kami akan meninjau dan mengambil tindakan jika diperlukan.</p>
+      </section>
+    </main>
+    <aside class="aside">
+      <section class="card">
+        <h2>Bantuan</h2>
+        <ul class="links" id="bantuan">
+          <li>Help Center</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Lokasi Pengelola</h2>
+        <p>Sekretariat Green Campus, gedung rektorat.</p>
+      </section>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>SisaKu: Kelola SisaKu, Jaga KampusKu</p>
+      <p><a href="contact.html">Lapor Masalah</a> | <a href="contact.html#bantuan">Bantuan</a> | <a href="registration.html">Daftar</a></p>
+      <p>&copy; 2026 SisaKu</p>
+    </div>
+  </footer>
+</body>
+</html>
